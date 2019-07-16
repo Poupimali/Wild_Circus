@@ -36,6 +36,11 @@ class Artist
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $role_play;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Artist
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getRolePlay(): ?string
+    {
+        return $this->role_play;
+    }
+
+    public function setRolePlay(string $role_play): self
+    {
+        $this->role_play = $role_play;
 
         return $this;
     }
