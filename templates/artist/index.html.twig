@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container footer-bas">
+        <h1>Nos artistes</h1>
+        <h2>Charte ethique</h2>
+
+        <p>Nous sommes très soucieux de l’environnement et de la protection de la nature.
+            C’est par amour des animaux et par respect du public que nous avons décidé d’arrêter de mettre en avant
+            des
+            animaux sauvages ou domestiqués. 80 % des Français sont sensibles à la cause animale. Nous aussi.
+            Aucun de nos artistes ne fait appel à un animal dans son show.
+            Vous ne resterez pas néanmoins ébahi.e.s par les performances extra-ordinaires de ces talents primés
+            notamment
+            au célèbre festival du cirque de Monaco Monte-Carlo.</p>
+
+        <div class="cards-artist">
+            {% for artist in artists %}
+                <div class="card-artist">
+                    <h3>{{ artist.role }}</h3>
+                    <div class="card card-width">
+                        <img class="card-img-top" src="{{ artist.picture }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ artist.name }}</h4>
+                            <h5 class="card-title">{{ artist.type }}</h5>
+                            <p class="card-text">{{ artist.description }}</p>
+                            <a href="#" class="button-pink"><span>Editer</span></a>
+                            <a href="#" class="button-pink"><span>Supprimer</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

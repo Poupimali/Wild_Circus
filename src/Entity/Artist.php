@@ -39,7 +39,7 @@ class Artist
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $role_play;
+    private $role;
 
     public function getId(): ?int
     {
@@ -94,14 +94,14 @@ class Artist
         return $this;
     }
 
-    public function getRolePlay(): ?string
+    public function getRole(): ?string
     {
-        return $this->role_play;
+        return $this->role;
     }
 
-    public function setRolePlay(string $role_play): self
+    public function setRole(string $role): self
     {
-        $this->role_play = $role_play;
+        $this->role = $role;
 
         return $this;
     }

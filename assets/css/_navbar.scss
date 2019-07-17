@@ -14,16 +14,20 @@
   .nav-a{
     transition: 0.4s;
     .nav-text{
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      color: $brown-color;
     }
-  }
-  .nav-a:hover{
-    color: $brown-color;
   }
 }
 
-.active-nav{
+.active{
     color: $wild-color !important;
+}
+
+.navbar-toggler{
+  .navbar-toggler-icon{
+    margin-top: 0 !important;
+  }
 }
 
 
@@ -40,7 +44,7 @@
     align-items: center;
     .nav-a{
       .nav-text{
-        font-size: 1.3rem;
+        font-size: 1.15rem;
       }
     }
   }
@@ -58,7 +62,7 @@
   .item-navbar{
     .nav-a{
       .nav-text{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
     }
   }

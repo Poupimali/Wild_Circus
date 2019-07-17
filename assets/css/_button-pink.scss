@@ -1,0 +1,21 @@
+.button-pink{
+  background-color: $pink-color;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 30px auto;
+  display: block;
+  transition: 0.4s;
+  width: 230px;
+  text-align: center;
+  span{
+    color: $back;
+  }
+}
+
+.button-pink:hover{
+  background-color: $wild-color;
+  text-decoration: none;
+  span{
+    color: $back;
+  }
+}

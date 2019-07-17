@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light nav-flex">
-    <a href="{{ path('app_home') }}"><img src="{{ asset('build/img/LOGO.png') }}" class="navbar-logo"
+    <a href="{{ path('app_home') }}"><img src="{{ asset('build/LOGO.png') }}" class="navbar-logo"
                                           alt="logo Wild Circus"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,10 +8,10 @@
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto nav_mobile item-navbar">
-            <a class="nav-item nav-link nav-a {% if app.request.server.get('PATH_INFO') == null %}active active-nav{% endif %}"
+            <a class="nav-item nav-link nav-a {% if app.request.server.get('PATH_INFO') == null %}active{% endif %}"
                href="{{ path('app_home') }}"><span class="nav-text">Accueil</span></a>
-            <a class="nav-item nav-link nav-a"
-               href="#"><span class="nav-text">Artistes</span></a>
+            <a class="nav-item nav-link nav-a {% if app.request.server.get('PATH_INFO') == null %}active{% endif %}"
+               href="{{ path('artist_index') }}"><span class="nav-text">Artistes</span></a>
             <a class="nav-item nav-link nav-a"
                href="#"><span class="nav-text">Tarifs</span></a>
             <a class="nav-item nav-link nav-a"

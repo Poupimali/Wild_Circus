@@ -1,11 +1,17 @@
 @import "vars";
+
+@import "artist";
+@import "home";
+@import "button-pink";
 @import "~bootstrap";
 @import "navbar";
 @import "footer";
 
+
 body {
     background-color: $back;
-    margin: 0px;
+    margin: 0;
+    font-family: $typography-text;
 }
 
 h1,
@@ -17,8 +23,8 @@ h3{
     color: $brown-color;
 }
 
-span,
-p{
-    font-family: $typography-text;
+p,
+span{
+    margin-top: 30px;
 }
 
