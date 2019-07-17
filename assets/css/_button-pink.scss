@@ -19,3 +19,30 @@
     color: $back;
   }
 }
+
+.button-pink-spe{
+  background-color: $pink-color;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 1px auto;
+  display: block;
+  transition: 0.4s;
+  width: 150px;
+  text-align: center;
+  span{
+    color: $back;
+  }
+}
+
+.button-pink-spe:hover{
+  background-color: $wild-color;
+  text-decoration: none;
+  span{
+    color: $back;
+  }
+}
+
+.button-plus{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

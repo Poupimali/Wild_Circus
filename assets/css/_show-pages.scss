@@ -1,0 +1,10 @@
+.link-tarif{
+  color: $pink-color;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.link-tarif:hover{
+  color: $wild-color;
+  text-decoration: none;
+}

@@ -12,8 +12,8 @@ class ShowFixtures extends Fixture
     {
         $shows = [
             ['name' => 'Spectacle de 15h',
-                'price_adult' => 20,
-                'price_child' => 13,
+                'price_adult' => 17,
+                'price_child' => 10,
                 'time-slot' => '15h'],
             ['name' => 'Spectacle de 20h',
                 'price_adult' => 20,

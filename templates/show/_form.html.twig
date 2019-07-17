@@ -1,4 +1,31 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<div class="form-security">
+    {{ form_start(form) }}
+    <div class="mt-2 mb-3 form-new-label">
+        {{ form_row(form.name, {
+            attr: { 'placeholder': 'Nom'}},
+            {'label_attr': {'class': 'artist-nouveau'}}) }}
+    </div>
+    <div class="mt-2 mb-3 form-new-label">
+        {{ form_row(form.price_adult, {
+            attr: { 'placeholder': "Tarif Adulte"}},
+            {'label_attr': {'class': 'artist-nouveau'}}) }}
+    </div>
+    <div class="mt-2 mb-3 form-new-label">
+        {{ form_row(form.price_child, {
+            attr: { 'placeholder': 'Tarif Enfant'}},
+            {'label_attr': {'class': 'artist-nouveau'}}) }}
+    </div>
+    <div class="mt-2 mb-3 form-new-label">
+        {{ form_row(form.date, {
+            attr: { 'placeholder': 'Date'}},
+            {'label_attr': {'class': 'artist-nouveau'}}) }}
+    </div>
+    <div class="mt-2 mb-3 form-new-label">
+        {{ form_row(form.time_slot, {
+            attr: { 'placeholder': "Heure"}},
+            {'label_attr': {'class': 'artist-nouveau'}}) }}
+    </div>
+    <button class="btn btn-lg btn-dark button-form ">{{ button_label|default('Sauvegarder') }}</button>
+    {{ form_end(form) }}
+
+</div>

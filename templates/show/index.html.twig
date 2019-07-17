@@ -3,43 +3,39 @@
 {% block title %}Show index{% endblock %}
 
 {% block body %}
-    <h1>Show index</h1>
-
-    <table class="table">
-        <thead>
+    <h1 class="mb-4">Show index</h1>
+    <div class="container footer-bas-tarif">
+        <table class="table">
+            <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price_adult</th>
-                <th>Price_child</th>
-                <th>Date</th>
-                <th>Time_slot</th>
-                <th>Message</th>
-                <th>actions</th>
+                <th>Spectacle</th>
+                <th>Tarif Adulte</th>
+                <th>Tarifs Enfant</th>
+                <th>Groupe (plus de 10 pers.)</th>
+                {% if app.user %}
+                    <th>Actions</th>
+                {% endif %}
             </tr>
-        </thead>
-        <tbody>
-        {% for show in shows %}
-            <tr>
-                <td>{{ show.id }}</td>
-                <td>{{ show.name }}</td>
-                <td>{{ show.priceAdult }}</td>
-                <td>{{ show.priceChild }}</td>
-                <td>{{ show.date ? show.date|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ show.timeSlot }}</td>
-                <td>{{ show.message }}</td>
-                <td>
-                    <a href="{{ path('show_show', {'id': show.id}) }}">show</a>
-                    <a href="{{ path('show_edit', {'id': show.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('show_new') }}">Create new</a>
+            </thead>
+            <tbody>
+            {% for show in shows %}
+                <tr>
+                    <td>{{ show.name }}</td>
+                    <td>{{ show.priceAdult }}</td>
+                    <td>{{ show.priceChild }}</td>
+                    <td><a href="{{ path('app_contact') }}" class="link-tarif">Nous Contacter</a></td>
+                    {% if app.user %}
+                        <td>
+                            <a href="{{ path('show_edit', {'id': show.id}) }}"
+                               class="button-pink-spe"><span>Edition</span></a>
+                        </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% if app.user %}
+            <a href="{{ path('show_new') }}" class="button-pink"><span>Créer un nouveau tarif</span></a>
+        {% endif %}
+    </div>
 {% endblock %}

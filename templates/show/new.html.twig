@@ -1,11 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Show{% endblock %}
+{% block title %}Nouveau Spectacle{% endblock %}
 
 {% block body %}
-    <h1>Create new Show</h1>
+    <div class="container-fluid footer-bas">
+        <h1 class="h3 mb-5">Créer un nouveau spectacle</h1>
+        <div class="my-custom-class-for-errors">
+            {{ form_errors(form) }}
+        </div>
 
-    {{ include('show/_form.html.twig') }}
+        {{ include('show/_form.html.twig') }}
 
-    <a href="{{ path('show_index') }}">back to list</a>
+        <a href="{{ path('show_index') }}" class="button-pink"><span>Retour à la liste</span></a>
+    </div>
 {% endblock %}
+

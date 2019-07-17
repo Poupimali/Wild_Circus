@@ -1,31 +1,31 @@
 <div class="form-security">
-    {{ form_start(form) }}
+    {{ form_start(artistForm) }}
     <div class="mt-2 mb-3 form-new-label">
-        {{ form_row(form.name, {
+        {{ form_row(artistForm.name, {
             attr: { 'placeholder': 'Nom'}},
             {'label_attr': {'class': 'artist-nouveau'}}) }}
     </div>
     <div class="mt-2 mb-3 form-new-label">
-        {{ form_row(form.type, {
+        {{ form_row(artistForm.type, {
             attr: { 'placeholder': "Type d'artiste"}},
             {'label_attr': {'class': 'artist-nouveau'}}) }}
     </div>
     <div class="mt-2 mb-3 form-new-label">
-        {{ form_row(form.picture, {
+        {{ form_row(artistForm.picture, {
             attr: { 'placeholder': 'Chargez une photo'}},
             {'label_attr': {'class': 'artist-nouveau'}}) }}
     </div>
     <div class="mt-2 mb-3 form-new-label">
-        {{ form_row(form.description, {
+        {{ form_row(artistForm.description, {
             attr: { 'placeholder': 'Description'}},
             {'label_attr': {'class': 'artist-nouveau'}}) }}
     </div>
     <div class="mt-2 mb-3 form-new-label">
-        {{ form_row(form.role, {
+        {{ form_row(artistForm.role, {
             attr: { 'placeholder': "Rôle"}},
             {'label_attr': {'class': 'artist-nouveau'}}) }}
     </div>
     <button class="btn btn-lg btn-dark button-form">{{ button_label|default('Sauvegarder') }}</button>
-    {{ form_end(form) }}
+    {{ form_end(artistForm) }}
 
 </div>

@@ -1,11 +1,10 @@
 .form-security{
   form{
-    max-width: 80% !important;
+    padding: 30px 40px;
     .form-new-label{
       div{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
       }
     }
   }

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container footer-bas-tarif">
+        <h1 class="pt-4 pb-4">Contactez-nous !</h1>
+
+        <div class="form-security">
+
+            {{ form_start(contactForm) }}
+            <div class="mt-2 mb-3 form-new-label">
+                {{ form_row(contactForm.name, { 'label': ' ', 'attr': {'placeholder': 'Votre nom et prénom'} }) }}
+            </div>
+            <div class="mt-2 mb-3 form-new-label">
+                {{ form_row(contactForm.email,  { 'label': ' ', 'attr': {'placeholder': 'Votre Email'} }) }}
+            </div>
+            <div class="mt-2 mb-3 form-new-label">
+                {{ form_row(contactForm.object,  { 'label': ' ', 'attr': {'placeholder': 'Objet'} }) }}
+            </div>
+            <div class="mt-2 mb-3 form-new-label">
+                {{ form_row(contactForm.message,  { 'label': ' ', 'attr': {'placeholder': 'Entrez votre message'} }) }}
+            </div>
+            <button class="btn btn-lg btn-dark button-form">{{ button_label|default('Valider') }}</button>
+            {{ form_end(contactForm) }}
+
+        </div>
+
+    </div>
+{% endblock %}

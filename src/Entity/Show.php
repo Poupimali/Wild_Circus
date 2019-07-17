@@ -33,7 +33,7 @@ class Show
     private $price_child;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="date", nullable=true)
      */
     private $date;
 
