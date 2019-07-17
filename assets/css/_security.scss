@@ -1,9 +1,6 @@
 .form-security{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
+  margin: 40px auto;
+  max-width: 70%;
   .login-form{
     max-width: 600px !important;
     margin-bottom: 30px !important;
@@ -12,3 +9,8 @@
 
 
 
+@media screen and (max-width: 799px) {
+  .form-security{
+    max-width: 85%;
+  }
+}
