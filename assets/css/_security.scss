@@ -11,6 +11,12 @@
 
 @media screen and (max-width: 799px) {
   .form-security{
-    max-width: 85%;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-security{
+    max-width: 100%;
   }
 }
