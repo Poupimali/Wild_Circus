@@ -85,7 +85,7 @@ class ArtistController extends AbstractController
             /** @var UploadedFile $pictureFile */
             $pictureFile = $form['picture']->getData();
 
-            if (!empty($pictureFile) || empty($pictureFile)) {
+            if (!empty($pictureFile)) {
                 $filesystem->remove($this->getParameter('photos_directory') . '/' . $artist->getPicture());
                 $pictureName = $pictureUploader->upload($pictureFile);
                 $artist->setPicture($pictureName);

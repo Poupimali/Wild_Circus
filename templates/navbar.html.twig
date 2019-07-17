@@ -14,8 +14,8 @@
                href="{{ path('artist_index') }}"><span class="nav-text">Artistes</span></a>
             <a class="nav-item nav-link nav-a {% if app.request.server.get('PATH_INFO') == path('show_index') %}active{% endif %}"
                href="{{ path('show_index') }}"><span class="nav-text">Tarifs</span></a>
-            <a class="nav-item nav-link nav-a"
-               href="#"><span class="nav-text">Pré-réservation</span></a>
+            {#<a class="nav-item nav-link nav-a"
+               href="#"><span class="nav-text">Pré-réservation</span></a>#}
             <a class="nav-item nav-link nav-a {% if app.request.server.get('PATH_INFO') == path('app_contact') %}active{% endif %}"
                href="{{ path('app_contact') }}"><span class="nav-text">Contact</span></a>
         </div>
