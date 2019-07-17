@@ -70,11 +70,18 @@ class Artist
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getPicture(): ?string
     {
         return $this->picture;
     }
 
+    /**
+     * @param string $picture
+     * @return Artist
+     */
     public function setPicture(?string $picture): self
     {
         $this->picture = $picture;

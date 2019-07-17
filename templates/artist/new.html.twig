@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Artist{% endblock %}
+
+{% block body %}
+    <div class="container footer-bas">
+        <h1 class="h3 mb-5">Créer un nouvel artiste</h1>
+        <div class="my-custom-class-for-errors">
+            {{ form_errors(form) }}
+        </div>
+
+        {{ include('artist/_form.html.twig') }}
+
+        <a href="{{ path('artist_index') }}" class="button-pink"><span>Retour à la liste</span></a>
+    </div>
+
+{% endblock %}

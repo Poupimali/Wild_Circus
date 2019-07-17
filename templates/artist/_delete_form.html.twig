@@ -1,0 +1,8 @@
+<div class="form-security">
+    <form method="post" action="{{ path('artist_delete', {'id': artist.id}) }}" onsubmit="return confirm('Êtes-vous sûr.e ' +
+ 'de vouloir supprimer cet article ?');">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ artist.id) }}">
+        <button class="btn btn-lg btn-dark button-form">Supprimer</button>
+    </form>
+</div>

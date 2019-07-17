@@ -1,0 +1,14 @@
+.form-security{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  .login-form{
+    max-width: 600px !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+
+

@@ -12,7 +12,7 @@
     {% include 'navbar.html.twig' %}
 </header>
 {% if app.user %}
-<h2 class="text-center pt-3 pb-3 text-dark">Bonjour Administrateur !</h2>
+<h2 class="text-center pt-3 pb-3">Bonjour Administrateur !</h2>
         {% for category, messages in app.flashes %}
             {% for message in messages %}
                 <div class="alert alert-{{ category }}">
