@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <section>
+                <img width="100px" src="{{ asset('build/LOGO.png') }}" class="navbar-logo"
+                          alt="logo Wild Circus">
+
+                <divider border-color="#f76e6e"></divider>
+
+                <text font-size="20px" color="#f76e6e" font-family="helvetica">Bonjour</text>
+
+                <table>
+                    <tr>
+                        <td>Objet :</td>
+                        <td>{{ contact.object }}</td>
+                    </tr>
+                    <tr>
+                        <td>Nom :</td>
+                        <td>{{ contact.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Message :</td>
+                        <td>{{ contact.message | nl2br }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email de la personne à contacter :</td>
+                        <td>{{ contact.message | nl2br }}</td>
+                    </tr>
+
+                </table>
+            </column>
+        </section>
+    </body>
+</html>

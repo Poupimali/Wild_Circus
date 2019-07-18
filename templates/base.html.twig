@@ -11,23 +11,25 @@
 <header>
     {% include 'navbar.html.twig' %}
 </header>
+{% for category, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
+
 {% if app.user %}
-<h2 class="text-center pt-3 pb-3">Bonjour Administrateur !</h2>
-        {% for category, messages in app.flashes %}
-            {% for message in messages %}
-                <div class="alert alert-{{ category }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endfor %}
-        {% endif %}
-        {% block body %}
-        {% endblock %}
-        <footer>
-            {% include 'footer.html.twig' %}
-        </footer>
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+    <h2 class="text-center pt-3 pb-3">Bonjour Administrateur !</h2>
+{% endif %}
+
+{% block body %}
+{% endblock %}
+<footer>
+    {% include 'footer.html.twig' %}
+</footer>
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
 </body>
 </html>

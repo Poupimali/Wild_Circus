@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="container footer-bas">
-        <h1 class="pt-4 pb-4">Contactez-nous !</h1>
+        <h1 class="pt-3">Contactez-nous !</h1>
 
         <div class="form-security">
 
@@ -16,7 +16,7 @@
             <div class="mt-2 mb-3 form-new-label">
                 {{ form_row(contactForm.object,  { 'label': ' ', 'attr': {'placeholder': 'Objet'} }) }}
             </div>
-            <div class="mt-2 mb-3 form-new-label">
+            <div class="mt-2 pb-5 form-new-label">
                 {{ form_row(contactForm.message,  { 'label': ' ', 'attr': {'placeholder': 'Entrez votre message'} }) }}
             </div>
             <button class="btn btn-lg btn-dark button-form">{{ button_label|default('Valider') }}</button>
