@@ -1,13 +1,7 @@
 <html>
     <body>
         <section>
-                <img width="100px" src="{{ asset('build/LOGO.png') }}" class="navbar-logo"
-                          alt="logo Wild Circus">
-
-                <divider border-color="#f76e6e"></divider>
-
-                <text font-size="20px" color="#f76e6e" font-family="helvetica">Bonjour</text>
-
+                <h1 style="font-size: 20px; color: #f76e6e;">Bonjour</h1>
                 <table>
                     <tr>
                         <td>Objet :</td>
@@ -23,11 +17,10 @@
                     </tr>
                     <tr>
                         <td>Email de la personne à contacter :</td>
-                        <td>{{ contact.message | nl2br }}</td>
+                        <td>{{ contact.email }}</td>
                     </tr>
 
                 </table>
-            </column>
         </section>
     </body>
 </html>
