@@ -10,7 +10,7 @@
             <tr>
                 <th>Spectacle</th>
                 <th>Tarif Adulte</th>
-                <th>Tarifs Enfant</th>
+                <th>Tarif Enfant</th>
                 <th>Groupe (plus de 10 pers.)</th>
                 {% if app.user %}
                     <th>Actions</th>
@@ -20,9 +20,9 @@
             <tbody>
             {% for show in shows %}
                 <tr>
-                    <td>{{ show.name }}</td>
-                    <td>{{ show.priceAdult }}</td>
-                    <td>{{ show.priceChild }}</td>
+                    <td>{{ show.name }} </td>
+                    <td>{{ show.priceAdult }} €</td>
+                    <td>{{ show.priceChild }} €</td>
                     <td><a href="{{ path('app_contact') }}" class="link-tarif">Nous Contacter</a></td>
                     {% if app.user %}
                         <td>
